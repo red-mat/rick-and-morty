@@ -1,9 +1,17 @@
 import { useEffect, useState } from 'react';
 import { getCharacters } from '../services/restApi';
 
-import '../css/characterList.css'
+import '../css/characterList.css';
 
-function CharacterCard({ imgURL,name, specie, status,  setImageURL }) {
+function LoadingScreen({ isLoading }) {
+  if (isLoading) {
+    return <h1 className='loading-text'>Loading...</h1>;
+  }
+
+  return null;
+}
+
+function CharacterCard({ imgURL, name, specie, status, setImageURL }) {
   return (
     <div onClick={() => setImageURL(imgURL)} className='characterCard'>
       <img src={imgURL} alt='' />
@@ -28,22 +36,17 @@ export default function CharacterList({ setImageURL }) {
 
   return (
     <div>
-      {isLoading ? (
-        <h1 className='loading-text'>Loading...</h1>
-      ) : (
-        <div>
-          {characterList.map((character) => (
-            <CharacterCard 
-                key={character.id}
-                imgURL={character.image}
-                name={character.name}
-                specie={character.species}
-                status={character.status}
-                setImageURL={setImageURL}
-            />
-          ))}
-        </div>
-      )}
+      <LoadingScreen isLoading={isLoading}/>
+      {characterList.map((character) => (
+        <CharacterCard
+          key={character.id}
+          imgURL={character.image}
+          name={character.name}
+          specie={character.species}
+          status={character.status}
+          setImageURL={setImageURL}
+        />
+      ))}
     </div>
   );
 }
