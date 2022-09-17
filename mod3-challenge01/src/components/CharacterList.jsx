@@ -3,6 +3,8 @@ import { getCharacters } from '../services/restApi';
 
 import '../css/characterList.css';
 
+
+//Pantalla de carga: Es lo que se muestra mientras carga los datos
 function LoadingScreen({ isLoading }) {
   if (isLoading) {
     return <h1 className='loading-text'>Loading...</h1>;
@@ -11,6 +13,7 @@ function LoadingScreen({ isLoading }) {
   return null;
 }
 
+//Tarjeta de personaje: Muestra la informacion de un personaje
 function CharacterCard({ imgURL, name, specie, status, setImageURL }) {
   return (
     <div onClick={() => setImageURL(imgURL)} className='characterCard'>
@@ -22,6 +25,8 @@ function CharacterCard({ imgURL, name, specie, status, setImageURL }) {
   );
 }
 
+
+//Retorna la lista de personaje
 export default function CharacterList({ setImageURL }) {
   const [characterList, setCharList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
