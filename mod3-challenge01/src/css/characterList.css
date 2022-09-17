@@ -13,6 +13,11 @@
     box-shadow: 0 0 10px #686868;
     background-color: rgba(0, 140, 255, 0.219);
   }
+
+  .characterCard__img{
+    border-radius: 15px;
+    margin: 15px;
+  }
   .loading-text {
     font-size: 50px;
     font-weight: bold;

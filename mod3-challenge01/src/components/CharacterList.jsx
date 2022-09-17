@@ -17,7 +17,7 @@ function LoadingScreen({ isLoading }) {
 function CharacterCard({ imgURL, name, specie, status, setImageURL }) {
   return (
     <div onClick={() => setImageURL(imgURL)} className='characterCard'>
-      <img src={imgURL} alt='' />
+      <img src={imgURL} alt='' className='characterCard__img'/>
       <p>{name}</p>
       <p>{specie}</p>
       <p>{status}</p>
