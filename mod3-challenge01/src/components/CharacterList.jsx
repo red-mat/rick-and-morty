@@ -14,13 +14,13 @@ function LoadingScreen({ isLoading }) {
 }
 
 //Tarjeta de personaje: Muestra la informacion de un personaje
-function CharacterCard({ imgURL, name, specie, status, setImageURL }) {
+function CharacterCard({ character, onClick }) {
   return (
-    <div onClick={() => setImageURL(imgURL)} className='characterCard'>
-      <img src={imgURL} alt='' className='characterCard__img'/>
-      <p>{name}</p>
-      <p>{specie}</p>
-      <p>{status}</p>
+    <div onClick={() => onClick(character.image)} className='characterCard'>
+      <img src={character.image} alt='' className='characterCard__img'/>
+      <p>{character.name}</p>
+      <p>{character.species}</p>
+      <p>{character.status}</p>
     </div>
   );
 }
@@ -43,13 +43,10 @@ export default function CharacterList({ setImageURL }) {
     <div>
       <LoadingScreen isLoading={isLoading}/>
       {characterList.map((character) => (
-        <CharacterCard
-          key={character.id}
-          imgURL={character.image}
-          name={character.name}
-          specie={character.species}
-          status={character.status}
-          setImageURL={setImageURL}
+        <CharacterCard 
+          key={character.id} 
+          character={character}
+          onClick={setImageURL}
         />
       ))}
     </div>
