@@ -7,7 +7,5 @@
 }
 
 html{
-  background-image: url('assets/backgraund.jpg');
+  background-image: url('../assets/backgraund.jpg');
 }
-
-

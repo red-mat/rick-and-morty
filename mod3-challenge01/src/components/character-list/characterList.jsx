@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { getCharacters } from '../services/restApi';
+import { getCharacters } from '../../services/restApi';
 
-import '../css/characterList.css';
+import './characterList.css';
 
 
 //Pantalla de carga: Es lo que se muestra mientras carga los datos

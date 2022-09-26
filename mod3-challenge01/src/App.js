@@ -1,15 +1,15 @@
-import './App.css';
+import './css/App.css';
 import {useState} from 'react';
 
-import Image from './components/Image';
-import CharacterList from './components/CharacterList'
+import CharacterSelected from './components/character-selected/characterSelected';
+import CharacterList from './components/character-list/characterList'
 
 function App() {
   const [imageURL, setImageURL] = useState('')
 
   return (
     <div className='App'>
-      <Image src={imageURL}/>
+      <CharacterSelected src={imageURL}/>
       <CharacterList setImageURL={setImageURL}/>
     </div>
   );
