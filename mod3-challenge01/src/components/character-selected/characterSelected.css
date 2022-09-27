@@ -1,7 +1,21 @@
-.image{
-    box-shadow: 0 0 10px #686868;
+.container{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    height: 300px;
     width: 300px;
-    border-radius: 30px;
+
     padding: 20px;
+
     background-color: rgba(127, 255, 212, 0.438);
+    box-shadow: 0 0 10px #686868;
+    border-radius: 30px;
+}
+
+.container__avatar{
+    height: 90%;
+    width: 90%;
+
+    transition: opacity 400ms ease;  
 }

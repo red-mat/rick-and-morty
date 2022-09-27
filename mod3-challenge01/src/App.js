@@ -9,10 +9,9 @@ function App() {
 
   return (
     <div className='App'>
-      <CharacterSelected src={imageURL}/>
+      <CharacterSelected nextImage={imageURL}/>
       <CharacterList setImageURL={setImageURL}/>
     </div>
   );
 }
-
 export default App;
