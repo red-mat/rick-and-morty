@@ -1,16 +1,18 @@
 import './css/App.css';
-import {useState} from 'react';
+import { useState } from 'react';
 
 import CharacterSelected from './components/character-selected/characterSelected';
-import CharacterList from './components/character-list/characterList'
+import CharacterList from './components/character-list/characterList';
+
+import default_character from './assets/default-character.png';
 
 function App() {
-  const [imageURL, setImageURL] = useState('')
+  const [character_img, setImageURL] = useState(default_character);
 
   return (
     <div className='App'>
-      <CharacterSelected nextImage={imageURL}/>
-      <CharacterList setImageURL={setImageURL}/>
+      <CharacterSelected characterImg={character_img} />
+      <CharacterList setImageURL={setImageURL} />
     </div>
   );
 }

@@ -15,7 +15,5 @@
 
 .container__avatar{
     height: 90%;
-    width: 90%;
-
-    transition: opacity 400ms ease;  
+    width: 90%; 
 }
