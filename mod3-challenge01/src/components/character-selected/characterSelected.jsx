@@ -8,7 +8,11 @@ export default function CharacterSelected({ characterImg }) {
     characterImg,
     opacity_transition(350)
   );
-
+    
+  if (!characterImg){
+    return null;
+  }
+  
   return (
     <Container>
      <img
