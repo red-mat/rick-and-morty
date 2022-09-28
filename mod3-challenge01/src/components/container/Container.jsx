@@ -1,8 +1,9 @@
 import './Container.css';
 
-const Container = ({ children, containerModifier={} }) => {
+const Container = ({ children, modifier='',style={}, onClick}) => {
+
   return (
-    <div className='Container' style={containerModifier}>
+    <div className={`Container ${modifier}`} style={style} onClick={onClick}>
       {children}
     </div>
   );
