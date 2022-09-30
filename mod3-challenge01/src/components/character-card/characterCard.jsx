@@ -1,6 +1,6 @@
 import './characterCard.css';
 
-import Container from '../container-component/Container';
+import {Container} from '../components-index';
 
 function CharacterCard({ character, onClick }) {
     return (
