@@ -11,7 +11,7 @@ export default function CharacterSelected({ characterImg }) {
     opacity_transition(350)
   );
     
-  if (!characterImg){
+  if (!character_avatar){
     return null;
   }
   
