@@ -16,8 +16,8 @@ function App() {
   const [characterList, isLoading] = useFetchingCharacters();
 
   return (
-    <Container>
-    {isLoading&&<LoadingScreen/>}
+    <Container modifier='App'>
+    {isLoading&&<LoadingScreen isLoading={isLoading}/>}
       <CharacterSelected characterImg={characterSelected} />
       <CharacterList characterList={characterList} cardClick={setImageURL} />
     </Container>

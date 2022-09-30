@@ -1,13 +1,15 @@
 import './characterCard.css';
 
+import Container from '../container/Container';
+
 function CharacterCard({ character, onClick }) {
     return (
-      <div onClick={() => onClick(character.image)} className='characterCard'>
-        <img src={character.image} alt='' className='characterCard__img'/>
+      <Container onClick={onClick} modifier='character-card'>
+        <img src={character.image} alt='' className='characterCard__avatar'/>
         <p>{character.name}</p>
         <p>{character.species}</p>
         <p>{character.status}</p>
-      </div>
+      </Container>
     );
   }
 

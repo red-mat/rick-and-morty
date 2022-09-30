@@ -7,12 +7,12 @@ import CharacterCard from '../character-card/characterCard';
 //Retorna la lista de personaje
 export default function CharacterList({ characterList, cardClick }) {
   return (
-    <div>
+    <div className='CharacterList'>
       {characterList.map((character) => (
         <CharacterCard 
           key={character.id} 
           character={character}
-          onClick={cardClick}
+          onClick={() =>  cardClick(character.image)}
         />
       ))}
     </div>
