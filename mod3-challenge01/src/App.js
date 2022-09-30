@@ -2,10 +2,12 @@ import { useState } from 'react';
 
 import './css/App.css';
 
-import Container from './components/container/Container';
-import LoadingScreen from './components/loading-screen/loadingScreen';
-import CharacterSelected from './components/character-selected/characterSelected';
-import CharacterList from './components/character-list/characterList';
+import {
+  Container,
+  LoadingScreen,
+  CharacterSelected,
+  CharacterList
+} from './components/components-index';
 
 import useFetchingCharacters from './hooks/useFetchingCharacters/useFetchingCharacters';
 
