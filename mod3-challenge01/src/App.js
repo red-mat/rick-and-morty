@@ -9,7 +9,7 @@ import {
   CharacterList
 } from './components/components-index';
 
-import useFetchingCharacters from './hooks/useFetchingCharacters/useFetchingCharacters';
+import {useFetchingCharacters} from './hooks/hooks-index';
 
 
 
