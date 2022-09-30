@@ -1,7 +1,7 @@
 import './characterList.css';
 
 
-import CharacterCard from '../character-card/characterCard';
+import {CharacterCard} from '../components-index';
 
 
 //Retorna la lista de personaje
