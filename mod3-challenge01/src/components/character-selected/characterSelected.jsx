@@ -1,14 +1,20 @@
-import Container from '../container/Container';
-import useTransitionEffect from '../../hooks/useTransitionEffects/useTransitionEffect';
 import './characterSelected.css';
-import opacity_transition from '../../hooks/useTransitionEffects/transition_effects/opacity_transition';
+
+import {Container} from '../components-index';
+
+import {useTransitionEffect} from '../../hooks/hooks-index';
+import {opacity_transition} from '../../hooks/useTransitionEffects/transitions-index';
 
 export default function CharacterSelected({ characterImg }) {
   const [character_avatar, opacity_avatar] = useTransitionEffect(
     characterImg,
     opacity_transition(350)
   );
-
+    
+  if (!character_avatar){
+    return null;
+  }
+  
   return (
     <Container>
      <img

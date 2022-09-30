@@ -1,22 +1,28 @@
-import './css/App.css';
 import { useState } from 'react';
 
-import CharacterSelected from './components/character-selected/characterSelected';
-import CharacterList from './components/character-list/characterList';
+import './css/App.css';
 
-import default_character from './assets/default-character.png';
-import Container from './components/container/Container';
+import {
+  Container,
+  LoadingScreen,
+  CharacterSelected,
+  CharacterList
+} from './components/components-index';
+
+import {useFetchingCharacters} from './hooks/hooks-index';
+
+
 
 function App() {
-  const [character_img, setImageURL] = useState(default_character);
+  const [characterSelected, setImageURL] = useState();
+  const [characterList, isLoading] = useFetchingCharacters();
 
   return (
-    <div className='App'>
-      <Container>
-        <CharacterSelected characterImg={character_img} />
-        <CharacterList setImageURL={setImageURL} />
-      </Container>
-    </div>
+    <Container modifier='App'>
+    {isLoading&&<LoadingScreen isLoading={isLoading}/>}
+      <CharacterSelected characterImg={characterSelected} />
+      <CharacterList characterList={characterList} cardClick={setImageURL} />
+    </Container>
   );
 }
 export default App;

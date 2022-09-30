@@ -1,0 +1,30 @@
+.character-card {
+  --transition-time:0.5s;
+
+  max-width: 70vw;
+  
+  font-size: x-large;
+  font-weight: bold;
+  color: rgb(230, 230, 230);
+  text-shadow: 0 0 7px black;
+  
+  border: none;
+  border-radius: 30px;
+  
+  box-shadow: none;
+
+  transition: 
+  background-color var(--transition-time),
+  box-shadow var(--transition-time);
+}
+
+.character-card:hover {
+  box-shadow: 0 0 10px #686868;
+  background-color: rgba(0, 140, 255, 0.219);
+}
+
+.characterCard__avatar {
+  max-width: 100%;
+  border-radius: 15px;
+  margin: 15px;
+}
