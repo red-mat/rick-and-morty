@@ -1,4 +1,4 @@
-import Container from '../container/Container';
+import Container from '../container-component/Container';
 import useTransitionEffect from '../../hooks/useTransitionEffects/useTransitionEffect';
 import './characterSelected.css';
 import opacity_transition from '../../hooks/useTransitionEffects/transition_effects/opacity_transition';
