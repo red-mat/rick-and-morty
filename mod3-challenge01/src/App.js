@@ -6,20 +6,18 @@ import {
   Container,
   LoadingScreen,
   CharacterSelected,
-  CharacterList
+  CharacterList,
 } from './components/components-index';
 
-import {useFetchingCharacters} from './hooks/hooks-index';
-
-
+import { useCharacters } from './modules/rick_and_morty_api/hooks/exports';
 
 function App() {
   const [characterSelected, setImageURL] = useState();
-  const [characterList, isLoading] = useFetchingCharacters();
+  const [characterList, isLoading] = useCharacters();
 
   return (
     <Container modifier='App'>
-    {isLoading&&<LoadingScreen isLoading={isLoading}/>}
+      {isLoading && <LoadingScreen isLoading={isLoading} />}
       <CharacterSelected characterImg={characterSelected} />
       <CharacterList characterList={characterList} cardClick={setImageURL} />
     </Container>
