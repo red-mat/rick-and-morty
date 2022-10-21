@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-const useTransitionEffect = (nextContent, styleEffect) => {
+const useSwapEffect = (nextContent, styleEffect) => {
   const [content, setCharacterAvatar] = useState(null);
   const [style, setStyle] = useState(styleEffect.seen);
 
@@ -26,4 +26,4 @@ const useTransitionEffect = (nextContent, styleEffect) => {
   return [content, style];
 };
 
-export default useTransitionEffect;
+export default useSwapEffect;
