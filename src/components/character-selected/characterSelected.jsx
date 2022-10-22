@@ -3,15 +3,15 @@ import './characterSelected.css';
 import { Container } from '../components-index';
 
 import { useSwapEffect } from '../../modules/transitions_effects/hook/exports';
-import { opacity_transition } from '../../modules/transitions_effects/effects/exports';
+import { opacityTransition } from '../../modules/transitions_effects/effects/exports';
 
 export default function CharacterSelected({ characterImg }) {
-  const [character_avatar, opacity_avatar] = useSwapEffect(
+  const [characterAvatar, opacityAvatar] = useSwapEffect(
     characterImg,
-    opacity_transition(350)
+    opacityTransition(350)
   );
 
-  if (!character_avatar) {
+  if (!characterAvatar) {
     return null;
   }
 
@@ -19,8 +19,8 @@ export default function CharacterSelected({ characterImg }) {
     <Container>
       <img
         className='character-image'
-        style={opacity_avatar}
-        src={character_avatar}
+        style={opacityAvatar}
+        src={characterAvatar}
         alt='avatar'
       />
     </Container>

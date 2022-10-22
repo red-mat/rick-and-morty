@@ -1,6 +1,6 @@
-const opacity_transition = (time) => {
+const opacityTransition = time => {
   return {
-    time: time,
+    time,
     seen: {
       opacity: 1,
       transition: `opacity ${time}ms ease`,
@@ -12,4 +12,4 @@ const opacity_transition = (time) => {
   };
 };
 
-export default opacity_transition;
+export default opacityTransition;

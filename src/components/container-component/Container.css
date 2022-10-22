@@ -1,13 +1,13 @@
-.Container{   
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   
-    padding: 2%;
-    margin: 3%;
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    border-radius: 30px;
-    background-color: rgba(127, 255, 212, 0.438);
-    box-shadow: 0 0 10px #686868;
+  padding: 2%;
+  margin: 3%;
+
+  border-radius: 30px;
+  background-color: rgba(127, 255, 212, 0.438);
+  box-shadow: 0 0 10px #686868;
 }

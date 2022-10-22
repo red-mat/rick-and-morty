@@ -1,3 +1,3 @@
-import opacity_transition from './opacity_transition';
+import opacityTransition from './opacity_transition';
 
-export { opacity_transition };
+export { opacityTransition };

@@ -1,26 +1,23 @@
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const useSwapEffect = (nextContent, styleEffect) => {
   const [content, setCharacterAvatar] = useState(null);
   const [style, setStyle] = useState(styleEffect.seen);
 
   useEffect(() => {
-    let timeout_effect;
+    let timeoutEffect;
 
     if (nextContent) {
       setStyle(styleEffect.unseen);
 
-      timeout_effect = setTimeout(() => {
+      timeoutEffect = setTimeout(() => {
         setCharacterAvatar(nextContent);
         setStyle(styleEffect.seen);
       }, styleEffect.time);
     }
     return () => {
-      clearTimeout(timeout_effect);
+      clearTimeout(timeoutEffect);
     };
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [nextContent]);
 
   return [content, style];
