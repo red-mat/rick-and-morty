@@ -1,12 +1,12 @@
-import { useState } from 'react';
-
 import './css/App.css';
+
+import { useState } from 'react';
 
 import {
   Container,
   LoadingScreen,
-  CharacterSelected,
   CharacterList,
+  HeaderApp,
 } from './components/components-index';
 
 import { useCharacters } from './modules/rick_and_morty_api/hooks/exports';
@@ -16,11 +16,13 @@ function App() {
   const [characterList, isLoading] = useCharacters();
 
   return (
-    <Container modifier='App'>
+    <div className='App'>
       {isLoading && <LoadingScreen isLoading={isLoading} />}
-      <CharacterSelected characterImg={characterSelected} />
-      <CharacterList characterList={characterList} cardClick={setImageURL} />
-    </Container>
+      <HeaderApp character={characterSelected} />
+      <Container>
+        <CharacterList characterList={characterList} cardClick={setImageURL} />
+      </Container>
+    </div>
   );
 }
 export default App;
