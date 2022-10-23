@@ -1,5 +1,7 @@
 import './css/App.css';
 
+import { Route, Routes } from 'react-router-dom';
+
 import { useState } from 'react';
 import { Home } from './pages/page-index';
 
@@ -13,12 +15,20 @@ function App() {
 
   return (
     <div className='App'>
-      <HeaderApp character={characterSelected} />
-      <Home
-        characterList={characterList}
-        setImageURL={setImageURL}
-        isLoading={isLoading}
-      />
+      <Routes>
+        <Route path='/' element={<HeaderApp character={characterSelected} />}>
+          <Route
+            index
+            element={
+              <Home
+                characterList={characterList}
+                setImageURL={setImageURL}
+                isLoading={isLoading}
+              />
+            }
+          />
+        </Route>
+      </Routes>
     </div>
   );
 }
