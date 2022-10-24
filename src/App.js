@@ -1,6 +1,6 @@
 import './css/App.css';
 
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 import { useState } from 'react';
 import { Home } from './pages/page-index';
@@ -9,6 +9,8 @@ import { HeaderApp } from './components/components-index';
 
 import { useCharacters } from './modules/rick_and_morty_api/hooks/exports';
 
+const HOME_PATH = '/rick-and-morty';
+
 function App() {
   const [characterSelected, setImageURL] = useState();
   const [characterList, isLoading] = useCharacters();
@@ -16,7 +18,11 @@ function App() {
   return (
     <div className='App'>
       <Routes>
-        <Route path='/' element={<HeaderApp character={characterSelected} />}>
+        <Route path='/' element={<Navigate to={HOME_PATH} />} />
+        <Route
+          path={HOME_PATH}
+          element={<HeaderApp character={characterSelected} />}
+        >
           <Route
             index
             element={
