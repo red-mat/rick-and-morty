@@ -1,8 +1,12 @@
 import { characters } from '../services/exports';
 import { useEffect, useState } from 'react';
 
-export default function useCharacters(page = 1) {
-  const [characterList, setCharList] = useState([]);
+import { CharacterApiResult } from '../services/types';
+
+type UseCharacters = [CharacterApiResult[], Boolean];
+
+export default function useCharacters(page = 1):UseCharacters {
+  const [characterList, setCharList] = useState<CharacterApiResult[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
