@@ -1,34 +1,34 @@
 // models gral. api
 
-export interface ApiInfo {
+export interface iApiInfo {
   count: number;
   pages: number;
   next: string;
   prev: string;
 }
 
-export interface ApiDescription {
+export interface iApiDescription {
   name: string;
   url: string;
 }
 
 // models Character Api
-export interface CharacterApiResult {
+export interface iCharacterApiResult {
   id: number;
   name: string;
   status: string;
   species: string;
   type: string;
   gender: string;
-  origin: ApiDescription;
-  location: ApiDescription;
+  origin: iApiDescription;
+  location: iApiDescription;
   image: string;
   episode: string[];
   string: string;
   created: string;
 }
 
-export interface CharactersApiResult {
-  info: ApiInfo;
-  results: CharacterApiResult[];
+export interface iCharactersApiResult {
+  info: iApiInfo;
+  results: iCharacterApiResult[];
 }
