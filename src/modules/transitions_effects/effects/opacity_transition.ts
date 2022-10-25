@@ -1,4 +1,6 @@
-const opacityTransition = time => {
+import { iTransition } from '../types';
+
+const opacityTransition = (time: number): iTransition => {
   return {
     time,
     seen: {
