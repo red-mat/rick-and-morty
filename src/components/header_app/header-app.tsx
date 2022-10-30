@@ -5,7 +5,10 @@ import { Outlet } from 'react-router-dom';
 
 import { CharacterSelected } from '../components-index';
 
-function HeaderApp({ character }) {
+interface iProps {
+  character: string;
+}
+function HeaderApp({ character }: iProps): JSX.Element {
   return (
     <Fragment>
       <header id='header' className='header'>

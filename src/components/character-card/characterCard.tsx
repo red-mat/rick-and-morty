@@ -1,8 +1,13 @@
 import './characterCard.css';
 
 import { Container } from '../components-index';
+import {iCharacterApiResult} from '../../modules/rick_and_morty_api/services/types';
 
-function CharacterCard({ character, onClick }) {
+
+type tOneClick = () => void;
+interface iProps {character:iCharacterApiResult, onClick:tOneClick};
+
+function CharacterCard({ character, onClick }:iProps) :JSX.Element {
   return (
     <Container onClick={onClick} modifier='character-card'>
       <img src={character.image} alt='' className='characterCard__avatar' />

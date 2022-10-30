@@ -1,5 +1,6 @@
+import { CSSProperties } from 'react';
 export interface iTransition {
   time: number;
-  seen: object;
-  unseen: object;
+  seen: CSSProperties;
+  unseen: CSSProperties;
 }

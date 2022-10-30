@@ -1,17 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, CSSProperties } from 'react';
 import { iTransition } from '../types';
 
+type tContent = object | string | null | undefined;
+type tUseSwapEffect = [tContent, CSSProperties];
 
-type tUseSwapEffect = [object|null, object|null];
-
-const useSwapEffect = (nextContent:object, styleEffect:iTransition): tUseSwapEffect=> {
-  const [content, setContent] = useState<Object | null>(null);
-  const [style, setStyle] = useState<Object | null>(styleEffect.seen);
+const useSwapEffect = (
+  nextContent: tContent,
+  styleEffect: iTransition
+): tUseSwapEffect => {
+  const [content, setContent] = useState<tContent>(null);
+  const [style, setStyle] = useState<CSSProperties>(styleEffect.seen);
 
   useEffect(() => {
-    let timeoutEffect:ReturnType<typeof setTimeout>;
+    let timeoutEffect: ReturnType<typeof setTimeout>;
 
-    if (nextContent!==null) {
+    if (nextContent !== null) {
       setStyle(styleEffect.unseen);
 
       timeoutEffect = setTimeout(() => {
