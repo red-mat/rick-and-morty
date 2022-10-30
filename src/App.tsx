@@ -5,7 +5,7 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import { useState } from 'react';
 import { Home } from './pages/page-index';
 
-import { HeaderApp } from './components/components-index';
+import { HeaderApp } from './components/index';
 import useCharacters from './modules/rick_and_morty_api/hooks/characters';
 
 const HOME_PATH = '/rick-and-morty';
