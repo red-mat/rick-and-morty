@@ -1,7 +1,13 @@
 import CharacterCard from './character-card/characterCard';
 import CharacterList from './character-list/characterList';
 import Container from './container-component/Container';
-import HeaderApp from './header_app/header-app';
+import Navigation from '../routes/navigation/navigation';
 import LoadingScreen from './loading-screen/loadingScreen';
 
-export { HeaderApp, CharacterCard, CharacterList, Container, LoadingScreen };
+export {
+  Navigation as HeaderApp,
+  CharacterCard,
+  CharacterList,
+  Container,
+  LoadingScreen,
+};

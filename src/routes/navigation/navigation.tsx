@@ -1,14 +1,14 @@
-import './header-app.css';
+import './navigation.css';
 
 import { Fragment } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import ImageContainer from '../image-container/image-container';
+import ImageContainer from '../../components/image-container/image-container';
 
 interface iProps {
   character: string;
 }
-function HeaderApp({ character }: iProps): JSX.Element {
+function Navigation({ character }: iProps): JSX.Element {
   return (
     <Fragment>
       <header id='header' className='header'>
@@ -20,4 +20,4 @@ function HeaderApp({ character }: iProps): JSX.Element {
   );
 }
 
-export default HeaderApp;
+export default Navigation;

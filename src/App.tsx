@@ -3,9 +3,8 @@ import './css/App.css';
 import { Route, Routes, Navigate } from 'react-router-dom';
 
 import { useState } from 'react';
-import { Home } from './pages/page-index';
+import { Home, Navigation } from './routes/index';
 
-import { HeaderApp } from './components/index';
 import useCharacters from './modules/rick_and_morty_api/hooks/characters';
 
 const HOME_PATH = '/rick-and-morty';
@@ -20,7 +19,7 @@ function App(): JSX.Element {
         <Route path='/' element={<Navigate to={HOME_PATH} />} />
         <Route
           path={HOME_PATH}
-          element={<HeaderApp character={characterSelected} />}
+          element={<Navigation character={characterSelected} />}
         >
           <Route
             index
