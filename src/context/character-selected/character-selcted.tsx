@@ -5,7 +5,7 @@ interface iContext {
   character: iCharacterApiResult | null;
   selectCharacter: React.Dispatch<iCharacterApiResult | null>;
 }
-const characterContext = createContext({});
+const characterContext = createContext<iContext | null>(null);
 export default characterContext;
 
 interface iProps {
