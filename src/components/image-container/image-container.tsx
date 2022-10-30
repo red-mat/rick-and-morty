@@ -1,4 +1,4 @@
-import { Container } from '../components-index';
+import { Container } from '../index';
 
 interface iProps {
   src: string;
