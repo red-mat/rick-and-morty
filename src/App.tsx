@@ -6,13 +6,12 @@ import { useState } from 'react';
 import { Home } from './pages/page-index';
 
 import { HeaderApp } from './components/components-index';
-
-import { useCharacters } from './modules/rick_and_morty_api/hooks/exports';
+import useCharacters from './modules/rick_and_morty_api/hooks/characters';
 
 const HOME_PATH = '/rick-and-morty';
 
-function App() {
-  const [characterSelected, setImageURL] = useState();
+function App(): JSX.Element {
+  const [characterSelected, setImageURL] = useState('');
   const [characterList, isLoading] = useCharacters();
 
   return (
