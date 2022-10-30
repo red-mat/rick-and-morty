@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react';
 
 import { iCharacterApiResult } from '../services/types';
 
-type UseCharacters = [iCharacterApiResult[], Boolean];
+type UseCharacters = [iCharacterApiResult[], boolean];
 
-export default function useCharacters(page = 1):UseCharacters {
+export default function useCharacters(page = 1): UseCharacters {
   const [characterList, setCharList] = useState<iCharacterApiResult[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
