@@ -23,6 +23,7 @@
   "plugins": ["react"],
   "rules": {
     "react/prop-types": "warn",
-    "@typescript-eslint/strict-boolean-expressions": "warn"
+    "@typescript-eslint/strict-boolean-expressions": "warn",
+    "@typescript-eslint/no-unused-vars": "warn"
   }
 }
