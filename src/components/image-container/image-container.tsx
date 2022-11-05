@@ -2,11 +2,10 @@ import { Container } from '../index';
 
 interface iProps {
   src: string;
-  style?: Object;
 }
 export default function ImageContainer(props: iProps): JSX.Element {
   return (
-    <Container style={props.style}>
+    <Container>
       <img src={props.src} alt='' />
     </Container>
   );
