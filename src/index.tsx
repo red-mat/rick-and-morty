@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
-import { CharacterProvider } from './context/character-selected/character-selcted';
+import CharacterProvider from './context/character-context/Character-provider';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
