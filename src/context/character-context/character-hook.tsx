@@ -1,6 +1,7 @@
 import { useContext } from 'react';
-import characterContext, { iContext } from './character-context';
+import characterContext from './character-context';
+import { iCharacterContext } from './types';
 
-export default function useCharacterContext(): iContext {
+export default function useCharacterContext(): iCharacterContext {
   return useContext(characterContext);
 }
