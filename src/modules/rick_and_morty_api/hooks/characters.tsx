@@ -1,4 +1,4 @@
-import { characters } from '../services/exports';
+import { characters } from '../services';
 import { useEffect, useState } from 'react';
 
 import { iCharacterApiResult } from '../services/types';
