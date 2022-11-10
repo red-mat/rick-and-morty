@@ -7,7 +7,7 @@ import {
   LoadingScreen,
 } from '../../components/index';
 
-import useCharacterContext from '../../context/character-context/character-hook';
+import useCharacterContext from '../../state_management/character-context/character-hook';
 import { withLink } from '../../hoc/withLink';
 import useCharacters from '../../modules/rick_and_morty_api/hooks/characters';
 import { iCharacterApiResult } from '../../modules/rick_and_morty_api/services/types';

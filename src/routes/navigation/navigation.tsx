@@ -4,7 +4,7 @@ import { Fragment } from 'react';
 import { Outlet } from 'react-router-dom';
 
 import { CharacterCard } from '../../components';
-import useCharacterContext from '../../context/character-context/character-hook';
+import useCharacterContext from '../../state_management/character-context/character-hook';
 import { iCharacterApiResult } from '../../modules/rick_and_morty_api/services/types';
 
 function Navigation(): JSX.Element {
